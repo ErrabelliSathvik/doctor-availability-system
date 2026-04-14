@@ -106,3 +106,9 @@ POST /api/book/
 
 &#x20;  python manage.py runserver
 
+
+
+\## Additional Notes
+
+This project handles real-world scheduling edge cases.
+
