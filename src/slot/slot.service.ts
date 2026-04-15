@@ -1,9 +1,14 @@
 import { Injectable } from '@nestjs/common';
 
+type Slot = {
+  start: Date;
+  end: Date;
+};
+
 @Injectable()
 export class SlotService {
-  generateSlots(start: Date, end: Date, duration: number) {
-    const slots = [];
+  generateSlots(start: Date, end: Date, duration: number): Slot[] {
+    const slots: Slot[] = [];
     let current = new Date(start);
 
     while (current.getTime() + duration * 60000 <= end.getTime()) {
